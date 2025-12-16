@@ -4,25 +4,83 @@
     ViewData["PageSubtitle"] = "Overview of your business";
 }
 
-<link href="~/Content/pages/dashboard.css" rel="stylesheet" asp-append-version="true"/>
+<h2 class="mt-4">Dashboard</h2>
+<p class="text-muted">Overview of your system</p>
 
-<div class="content-section dashboard-page">
-    <div class="section-header">
-        <h2>Dashboard</h2>
-        <p>Quick overview of your business performance.</p>
+<!-- Stats Cards -->
+<div class="row mt-4">
+    <div class="col-md-3">
+        <div class="card text-white bg-primary mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Users</h5>
+                <h3>1,250</h3>
+            </div>
+        </div>
     </div>
 
-    <div class="cards-grid dashboard-grid">
-        <div class="stat-card">
-            <div class="stat-label">Total Sales</div>
-            <div class="stat-value">₹0</div>
-            <div class="stat-meta">+0% vs last month</div>
+    <div class="col-md-3">
+        <div class="card text-white bg-success mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Orders</h5>
+                <h3>320</h3>
+            </div>
         </div>
-        <div class="stat-card">
-            <div class="stat-label">Invoices</div>
-            <div class="stat-value">0</div>
-            <div class="stat-meta">No invoices created yet</div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card text-white bg-warning mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Revenue</h5>
+                <h3>₹75,000</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card text-white bg-danger mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Pending</h5>
+                <h3>12</h3>
+            </div>
         </div>
     </div>
 </div>
+
+<!-- Table Section -->
+<div class="card mt-4">
+    <div class="card-header">
+        Recent Users
+    </div>
+    <div class="card-body p-0">
+        <table class="table table-striped mb-0">
+            <thead class="thead-dark">
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Kali</td>
+                    <td>kali@mail.com</td>
+                    <td><span class="badge badge-success">Active</span></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Arun</td>
+                    <td>arun@mail.com</td>
+                    <td><span class="badge badge-warning">Pending</span></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Vijay</td>
+                    <td>vijay@mail.com</td>
+                    <td><span class="badge badge-danger">Blocked</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>

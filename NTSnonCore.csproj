@@ -146,6 +146,12 @@
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
     <Content Include="Content\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\bootstrap-prefixed.css">
+      <DependentUpon>bootstrap-prefixed.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\bootstrap-prefixed.min.css">
+      <DependentUpon>bootstrap-prefixed.css</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-reboot.css" />
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap-reboot.rtl.css" />
@@ -158,6 +164,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\pages\addorganisation.css" />
     <Content Include="Content\pages\dashboard.css" />
     <Content Include="Content\pages\organisation.css" />
     <Content Include="Content\Site.css" />
@@ -181,6 +188,11 @@
     <Content Include="images\fonts\Poppins-Medium.ttf" />
     <Content Include="images\fonts\Poppins-Regular.ttf" />
     <Content Include="images\fonts\Poppins-SemiBold.ttf" />
+    <Content Include="Content\bootstrap-prefixed.scss" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />

@@ -12,9 +12,13 @@
     <title>@pageTitle</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Normal MVC 5 static reference -->
+    <!-- icons and css-->
     <link rel="stylesheet" href="~/images/fa/css/all.min.css" />
     <link rel="stylesheet" href="~/Content/Site.css" />
+
+    <!-- Prefixed Bootstrap -->
+    <link href="~/Content/bootstrap-prefixed.min.css" rel="stylesheet" />
+
 </head>
 
 <body>
@@ -232,11 +236,13 @@
 
         <!-- MAIN CONTENT -->
         <main class="sidebar-main" id="mainContent">
+            <div class="nts-bootstrap">
             @RenderBody()
+            </div>
         </main>
 
         <!-- FOOTER -->
-        <footer class="sidebar-footer app-footer">
+        <footer class="app-footer">
             <span>© 2025 NTS BOOK. All rights reserved.</span>
         </footer>
 

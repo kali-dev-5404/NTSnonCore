@@ -73,10 +73,10 @@
     --transition-fast: 0.15s ease;
     --transition-med: 0.2s ease;
     /* Z-index */
-    --z-sidebar: 20;
+    --z-sidebar: 30;
     --z-navbar: 15;
     --z-dropdown: 20;
-    --z-overlay: 10;
+    --z-overlay: 25;
 }
 
 /* =========================
@@ -84,7 +84,7 @@
    ========================= */
 @font-face {
     font-family: "Poppins";
-    src: local("Poppins Regular"), local("Poppins-Regular"), url("../fonts/Poppins-Regular.ttf") format("truetype");
+    src: local("Poppins Regular"), local("Poppins-Regular"), url("/images/fonts/Poppins-Regular.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -92,7 +92,7 @@
 
 @font-face {
     font-family: "Poppins";
-    src: local("Poppins Medium"), local("Poppins-Medium"), url("../fonts/Poppins-Medium.ttf") format("truetype");
+    src: local("Poppins Medium"), local("Poppins-Medium"), url("/images/fonts/Poppins-Medium.ttf") format("truetype");
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -100,7 +100,7 @@
 
 @font-face {
     font-family: "Poppins";
-    src: local("Poppins SemiBold"), local("Poppins-SemiBold"), url("../fonts/Poppins-SemiBold.ttf") format("truetype");
+    src: local("Poppins SemiBold"), local("Poppins-SemiBold"), url("/images/fonts/Poppins-SemiBold.ttf") format("truetype");
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -219,7 +219,7 @@ aside a{
     }
 
 .sidebar-logo {
-    left: 5px;
+    left:5px;
     display: flex;
     align-items: center;
     gap: var(--space-2);
@@ -290,7 +290,7 @@ aside a{
 /* Sidebar navbar */
 .sidebar-navbar {
     flex: 1;
-    overflow-y: hidden;
+    overflow-y: auto;
     padding: var(--space-3) 2px;
 }
 
@@ -740,13 +740,9 @@ aside a{
 /* =========================
    Main content
    ========================= */
-/* .sidebar-main {
-  grid-area: main;
-  padding: var(--space-8) var(--space-9) var(--space-7);
-} */
 
-/* Make main area stretch */
 .sidebar-main {
+    grid-area: main;
     display: flex;
     flex-direction: column;
     min-height: 0;
@@ -759,6 +755,7 @@ aside a{
     display: flex;
     flex-direction: column;
     min-height: 0;
+    overflow: auto;
 }
 
 
@@ -768,6 +765,7 @@ aside a{
    ========================= */
 .app-footer {
     grid-area: footer;
+    height: var(--footer-height);
     display: flex;
     align-items: center;
     justify-content: space-between;

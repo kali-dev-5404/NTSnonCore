@@ -75,8 +75,8 @@
     /* Z-index */
     --z-sidebar: 20;
     --z-navbar: 15;
+    --z-dropdown: 20;
     --z-overlay: 10;
-    --z-navbar-dropdown: 20;
 }
 
 /* =========================
@@ -129,6 +129,10 @@ body {
     line-height: 1.5;
 }
 
+aside a{
+    text-decoration:none;
+}
+
 /* =========================
    Layout grid: sidebar / navbar / main / footer
    ========================= */
@@ -174,12 +178,13 @@ body {
     border-right: 1px solid var(--sidebar-border);
     padding: var(--space-7) var(--space-6);
     gap: var(--space-3);
-    position: relative;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: hidden;
     z-index: var(--z-sidebar);
 }
-    .sidebar a {
-        text-decoration: none;
-    }
+
 /* Sidebar header */
 .sidebar-header {
     padding: var(--space-1) var(--space-1) var(--space-5);
@@ -285,7 +290,7 @@ body {
 /* Sidebar navbar */
 .sidebar-navbar {
     flex: 1;
-    overflow-y: auto;
+    overflow-y: hidden;
     padding: var(--space-3) 2px;
 }
 
@@ -626,7 +631,7 @@ body {
     box-shadow: var(--shadow-soft);
     padding: 6px 0;
     display: none;
-    z-index:var(--z-navbar-dropdown);
+    z-index: var(--z-dropdown);
 }
 
     .dropdown-menu.show {
@@ -735,10 +740,28 @@ body {
 /* =========================
    Main content
    ========================= */
+/* .sidebar-main {
+  grid-area: main;
+  padding: var(--space-8) var(--space-9) var(--space-7);
+} */
+
+/* Make main area stretch */
 .sidebar-main {
-    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
     padding: var(--space-8) var(--space-9) var(--space-7);
 }
+
+/* Content card must fill available height */
+.content-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+
 
 /* =========================
    Footer
@@ -755,89 +778,7 @@ body {
     color: var(--text-muted);
 }
 
-/* =========================
-   Content sections
-   ========================= */
-.content-section {
-    background: var(--glass-surface);
-    border-radius: 20px;
-    padding: var(--space-8) var(--space-8) var(--space-9);
-    border: 1px solid var(--border-soft-strong);
-    box-shadow: var(--shadow-soft);
-    backdrop-filter: blur(10px);
-}
 
-    .content-section.is-hidden {
-        display: none;
-    }
-
-.section-header {
-    margin-bottom: var(--space-6);
-}
-
-    .section-header h2 {
-        margin: 0 0 4px;
-        font-size: var(--font-size-xl);
-        color: var(--text-strong);
-    }
-
-    .section-header p {
-        margin: 0;
-        font-size: var(--font-size-sm);
-        color: var(--text-muted);
-    }
-
-/* Cards */
-.cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-    gap: var(--space-3);
-}
-
-.stat-card {
-    background: var(--bg-white);
-    border-radius: var(--radius-lg);
-    padding: var(--space-5) var(--space-5) var(--space-6);
-    border: 1px solid var(--border-subtle);
-    position: relative;
-    overflow: hidden;
-}
-
-    .stat-card::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: radial-gradient( circle at top right, rgba(0, 130, 96, 0.14), transparent );
-        opacity: 0.9;
-        pointer-events: none;
-    }
-
-.stat-label {
-    font-size: var(--font-size-sm);
-    color: var(--text-muted);
-}
-
-.stat-value {
-    font-size: var(--font-size-stat);
-    font-weight: 600;
-    color: var(--text-strong);
-    margin-top: 4px;
-}
-
-.stat-meta {
-    margin-top: 4px;
-    font-size: var(--font-size-xs);
-    color: var(--color-primary);
-}
-
-.placeholder-card {
-    border-radius: var(--radius-lg);
-    border: 1px dashed var(--border-subtle);
-    padding: var(--space-9);
-    font-size: var(--font-size-md);
-    color: var(--text-muted);
-    background: var(--bg-base);
-}
 
 /* =========================
    Responsive

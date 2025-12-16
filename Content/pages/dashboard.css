@@ -1,0 +1,116 @@
+﻿/* =========================
+   Dashboard Page Variables
+   ========================= */
+:root {
+    --dashboard-bg: #f9fafb;
+    --dashboard-card-bg: #ffffff;
+    --dashboard-border: #e5e7eb;
+    --dashboard-text-primary: #111827;
+    --dashboard-text-secondary: #6b7280;
+    --dashboard-accent: #2563eb;
+    --dashboard-accent-soft: #eff6ff;
+    --dashboard-radius: 12px;
+    --dashboard-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* =========================
+   Page Wrapper
+   ========================= */
+.dashboard-page {
+    background: var(--dashboard-bg);
+    padding: 20px;
+    min-height: calc(100vh - 120px); 
+}
+
+    /* =========================
+   Section Header
+   ========================= */
+    .dashboard-page .section-header {
+        margin-bottom: 20px;
+    }
+
+        .dashboard-page .section-header h2 {
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--dashboard-text-primary);
+            margin: 0;
+        }
+
+        .dashboard-page .section-header p {
+            margin-top: 4px;
+            font-size: 14px;
+            color: var(--dashboard-text-secondary);
+        }
+
+/* =========================
+   Cards Grid
+   ========================= */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+}
+
+/* =========================
+   Stat Card
+   ========================= */
+.stat-card {
+    background: var(--dashboard-card-bg);
+    border: 1px solid var(--dashboard-border);
+    border-radius: var(--dashboard-radius);
+    padding: 16px;
+    box-shadow: var(--dashboard-shadow);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+    .stat-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    }
+
+/* =========================
+   Card Content
+   ========================= */
+.stat-label {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--dashboard-text-secondary);
+}
+
+.stat-value {
+    margin-top: 6px;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--dashboard-text-primary);
+}
+
+.stat-meta {
+    margin-top: 6px;
+    font-size: 12px;
+    color: var(--dashboard-text-secondary);
+}
+
+/* =========================
+   Accent Variant (optional)
+   ========================= */
+.stat-card.primary {
+    background: var(--dashboard-accent-soft);
+    border-color: var(--dashboard-accent);
+}
+
+    .stat-card.primary .stat-value {
+        color: var(--dashboard-accent);
+    }
+
+/* =========================
+   Responsive Tweaks
+   ========================= */
+@media (max-width: 768px) {
+    .dashboard-page {
+        padding: 14px;
+    }
+
+    .stat-value {
+        font-size: 24px;
+    }
+}

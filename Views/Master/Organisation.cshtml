@@ -1,0 +1,580 @@
+@{
+    ViewData["Title"] = "Organisation | Master | NTS";
+    ViewData["PageHeading"] = "Organisation";
+    ViewData["PageSubtitle"] = "Manage organisation details";
+}
+
+<link href="~/Content/pages/organisation.css" rel="stylesheet" asp-append-version="true"/>
+
+<div class="content-section organisation-page">
+        <div class="table-card">
+
+          <!-- Top toolbar -->
+          <div class="table-toolbar">
+          <div class="toolbar-left">
+          <div class="search-box">
+          <i class="fa fa-search"></i>
+          <input type="text" placeholder="Search" id="tableSearch">
+          </div>
+          </div>
+
+          <div class="toolbar-right">
+          <button class="btn btn-outline">
+          <i class="fa fa-download"></i> Download CSV
+          </button>
+          <button class="btn btn-outline">
+          <i class="fa fa-upload"></i> Upload CSV
+          </button>
+          <button class="btn btn-outline">
+          <i class="fa fa-file-export"></i> Export CSV
+          </button>
+          <a href="@Url.Action("Addorganisation", "Master")"
+            class="btn btn-primary" style="text-decoration:none">
+            <i class="fa fa-plus"></i> Add Organisation
+          </a>
+          </div>
+          </div>
+
+          <!-- Table -->
+          <div class="table-wrapper">
+          <table class="data-table">
+          <thead>
+          <tr>
+           <th>S.No</th>
+           <th>
+          <span class="th-content">
+            <span class="th-text">Code</span>
+            <span class="th-icons">
+            <i class="fa fa-sort"></i>
+              </span>
+            </span>
+          </th>
+          <th>
+            <span class="th-content">
+              <span class="th-text">Organisation Name</span>
+              <span class="th-icons">
+                <i class="fa fa-sort"></i>
+              </span>
+            </span>
+          </th>
+          <th>
+          <span class="th-content">
+            <span class="th-text">Primary Mobile No.</span>
+            <span class="th-icons">
+              <i class="fa fa-sort"></i>
+            </span>
+          </span>
+        </th>
+                      <th>
+          <span class="th-content">
+            <span class="th-text">Alternate Mobile No.</span>
+            <span class="th-icons">
+              <i class="fa fa-sort"></i>
+            </span>
+          </span>
+        </th>
+                      <th>
+          <span class="th-content">
+            <span class="th-text">Email</span>
+            <span class="th-icons">
+              <i class="fa fa-sort"></i>
+            </span>
+          </span>
+        </th>
+        <th>
+          <span class="th-content">
+            <span class="th-text">Country</span>
+            <span class="th-icons">
+              <i class="fa fa-sort"></i>
+            </span>
+          </span>
+        </th>
+                      <th>
+          <span class="th-content">
+            <span class="th-text">State</span>
+            <span class="th-icons">
+              <i class="fa fa-sort"></i>
+            </span>
+          </span>
+        </th>
+                      <th>
+          <span class="th-content">
+            <span class="th-text">City</span>
+            <span class="th-icons">
+              <i class="fa fa-sort"></i>
+            </span>
+          </span>
+        </th>
+        <th>
+          <span class="th-content">
+            <span class="th-text">Zip Code</span>
+            <span class="th-icons">
+              <i class="fa fa-sort"></i>
+            </span>
+          </span>
+        </th>
+                      <th>
+          <span class="th-content">
+            <span class="th-text">Primary Address</span>
+            <span class="th-icons">
+              <i class="fa fa-sort"></i>
+            </span>
+          </span>
+        </th>
+                      <th>
+          <span class="th-content">
+            <span class="th-text">Alternate Address</span>
+            <span class="th-icons">
+              <i class="fa fa-sort"></i>
+            </span>
+          </span>
+        </th>
+                      <th>
+          <span class="th-content">
+            <span class="th-text">Status</span>
+            <span class="th-icons">
+              <i class="fa fa-sort"></i>
+            </span>
+          </span>
+           </th>
+           <th></th>
+          </tr>
+          </thead>
+
+    <tbody>
+  <tr>
+    <td>1</td>
+    <td>ORG-001</td>
+    <td>ABC Technologies Pvt Ltd</td>
+    <td>9876543210</td>
+    <td>9123456780</td>
+    <td>contact@abctech.com</td>
+    <td>India</td>
+    <td>Tamil Nadu</td>
+    <td>Madurai</td>
+    <td>625001</td>
+    <td>Anna Nagar, Madurai</td>
+    <td>Bypass Road, Madurai</td>
+    <td>
+      <span class="badge badge-active">Active</span>
+    </td>
+    <td class="action-cell">
+
+      <button class="kebab-btn" type="button" aria-label="Actions">
+    <i class="fa fa-ellipsis-vertical"></i>
+  </button>
+</td>
+  </tr>
+
+   <tr>
+    <td>1</td>
+    <td>ORG-001</td>
+    <td>ABC Technologies Pvt Ltd</td>
+    <td>9876543210</td>
+    <td>9123456780</td>
+    <td>contact@abctech.com</td>
+    <td>India</td>
+    <td>Tamil Nadu</td>
+    <td>Madurai</td>
+    <td>625001</td>
+    <td>Anna Nagar, Madurai</td>
+    <td>Bypass Road, Madurai</td>
+    <td>
+      <span class="badge badge-active">Active</span>
+    </td>
+    <td class="action-cell">
+  
+      <button class="kebab-btn" type="button" aria-label="Actions">
+    <i class="fa fa-ellipsis-vertical"></i>
+  </button>
+
+</td>
+  </tr>
+
+   <tr>
+    <td>1</td>
+    <td>ORG-001</td>
+    <td>ABC Technologies Pvt Ltd</td>
+    <td>9876543210</td>
+    <td>9123456780</td>
+    <td>contact@abctech.com</td>
+    <td>India</td>
+    <td>Tamil Nadu</td>
+    <td>Madurai</td>
+    <td>625001</td>
+    <td>Anna Nagar, Madurai</td>
+    <td>Bypass Road, Madurai</td>
+    <td>
+      <span class="badge badge-active">Active</span>
+    </td>
+    <td class="action-cell">
+  
+      <button class="kebab-btn" type="button" aria-label="Actions">
+    <i class="fa fa-ellipsis-vertical"></i>
+  </button>
+
+</td>
+  </tr>
+
+   <tr>
+    <td>1</td>
+    <td>ORG-001</td>
+    <td>ABC Technologies Pvt Ltd</td>
+    <td>9876543210</td>
+    <td>9123456780</td>
+    <td>contact@abctech.com</td>
+    <td>India</td>
+    <td>Tamil Nadu</td>
+    <td>Madurai</td>
+    <td>625001</td>
+    <td>Anna Nagar, Madurai</td>
+    <td>Bypass Road, Madurai</td>
+    <td>
+      <span class="badge badge-active">Active</span>
+    </td>
+    <td class="action-cell">
+
+  <button class="kebab-btn" type="button" aria-label="Actions">
+    <i class="fa fa-ellipsis-vertical"></i>
+  </button>
+</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>ORG-001</td>
+    <td>ABC Technologies Pvt Ltd</td>
+    <td>9876543210</td>
+    <td>9123456780</td>
+    <td>contact@abctech.com</td>
+    <td>India</td>
+    <td>Tamil Nadu</td>
+    <td>Madurai</td>
+    <td>625001</td>
+    <td>Anna Nagar, Madurai</td>
+    <td>Bypass Road, Madurai</td>
+    <td>
+      <span class="badge badge-active">Active</span>
+    </td>
+    <td class="action-cell">
+
+  <button class="kebab-btn" type="button" aria-label="Actions">
+    <i class="fa fa-ellipsis-vertical"></i>
+  </button>
+</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>ORG-001</td>
+    <td>ABC Technologies Pvt Ltd</td>
+    <td>9876543210</td>
+    <td>9123456780</td>
+    <td>contact@abctech.com</td>
+    <td>India</td>
+    <td>Tamil Nadu</td>
+    <td>Madurai</td>
+    <td>625001</td>
+    <td>Anna Nagar, Madurai</td>
+    <td>Bypass Road, Madurai</td>
+    <td>
+      <span class="badge badge-active">Active</span>
+    </td>
+    <td class="action-cell">
+
+  <button class="kebab-btn" type="button" aria-label="Actions">
+    <i class="fa fa-ellipsis-vertical"></i>
+  </button>
+</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>ORG-001</td>
+    <td>ABC Technologies Pvt Ltd</td>
+    <td>9876543210</td>
+    <td>9123456780</td>
+    <td>contact@abctech.com</td>
+    <td>India</td>
+    <td>Tamil Nadu</td>
+    <td>Madurai</td>
+    <td>625001</td>
+    <td>Anna Nagar, Madurai</td>
+    <td>Bypass Road, Madurai</td>
+    <td>
+      <span class="badge badge-active">Active</span>
+    </td>
+    <td class="action-cell">
+
+  <button class="kebab-btn" type="button" aria-label="Actions">
+    <i class="fa fa-ellipsis-vertical"></i>
+  </button>
+</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>ORG-001</td>
+    <td>ABC Technologies Pvt Ltd</td>
+    <td>9876543210</td>
+    <td>9123456780</td>
+    <td>contact@abctech.com</td>
+    <td>India</td>
+    <td>Tamil Nadu</td>
+    <td>Madurai</td>
+    <td>625001</td>
+    <td>Anna Nagar, Madurai</td>
+    <td>Bypass Road, Madurai</td>
+    <td>
+      <span class="badge badge-active">Active</span>
+    </td>
+    <td class="action-cell">
+
+  <button class="kebab-btn" type="button" aria-label="Actions">
+    <i class="fa fa-ellipsis-vertical"></i>
+  </button>
+</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>ORG-001</td>
+    <td>ABC Technologies Pvt Ltd</td>
+    <td>9876543210</td>
+    <td>9123456780</td>
+    <td>contact@abctech.com</td>
+    <td>India</td>
+    <td>Tamil Nadu</td>
+    <td>Madurai</td>
+    <td>625001</td>
+    <td>Anna Nagar, Madurai</td>
+    <td>Bypass Road, Madurai</td>
+    <td>
+      <span class="badge badge-active">Active</span>
+    </td>
+    <td class="action-cell">
+
+  <button class="kebab-btn" type="button" aria-label="Actions">
+    <i class="fa fa-ellipsis-vertical"></i>
+  </button>
+</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>ORG-001</td>
+    <td>ABC Technologies Pvt Ltd</td>
+    <td>9876543210</td>
+    <td>9123456780</td>
+    <td>contact@abctech.com</td>
+    <td>India</td>
+    <td>Tamil Nadu</td>
+    <td>Madurai</td>
+    <td>625001</td>
+    <td>Anna Nagar, Madurai</td>
+    <td>Bypass Road, Madurai</td>
+    <td>
+      <span class="badge badge-active">Active</span>
+    </td>
+    <td class="action-cell">
+
+  <button class="kebab-btn" type="button" aria-label="Actions">
+    <i class="fa fa-ellipsis-vertical"></i>
+  </button>
+</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>ORG-001</td>
+    <td>ABC Technologies Pvt Ltd</td>
+    <td>9876543210</td>
+    <td>9123456780</td>
+    <td>contact@abctech.com</td>
+    <td>India</td>
+    <td>Tamil Nadu</td>
+    <td>Madurai</td>
+    <td>625001</td>
+    <td>Anna Nagar, Madurai</td>
+    <td>Bypass Road, Madurai</td>
+    <td>
+      <span class="badge badge-active">Active</span>
+    </td>
+    <td class="action-cell">
+
+  <button class="kebab-btn" type="button" aria-label="Actions">
+    <i class="fa fa-ellipsis-vertical"></i>
+  </button>
+</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>ORG-001</td>
+    <td>ABC Technologies Pvt Ltd</td>
+    <td>9876543210</td>
+    <td>9123456780</td>
+    <td>contact@abctech.com</td>
+    <td>India</td>
+    <td>Tamil Nadu</td>
+    <td>Madurai</td>
+    <td>625001</td>
+    <td>Anna Nagar, Madurai</td>
+    <td>Bypass Road, Madurai</td>
+    <td>
+      <span class="badge badge-active">Active</span>
+    </td>
+    <td class="action-cell">
+
+  <button class="kebab-btn" type="button" aria-label="Actions">
+    <i class="fa fa-ellipsis-vertical"></i>
+  </button>
+</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>ORG-001</td>
+    <td>ABC Technologies Pvt Ltd</td>
+    <td>9876543210</td>
+    <td>9123456780</td>
+    <td>contact@abctech.com</td>
+    <td>India</td>
+    <td>Tamil Nadu</td>
+    <td>Madurai</td>
+    <td>625001</td>
+    <td>Anna Nagar, Madurai</td>
+    <td>Bypass Road, Madurai</td>
+    <td>
+      <span class="badge badge-active">Active</span>
+    </td>
+    <td class="action-cell">
+
+  <button class="kebab-btn" type="button" aria-label="Actions">
+    <i class="fa fa-ellipsis-vertical"></i>
+  </button>
+</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>ORG-001</td>
+    <td>ABC Technologies Pvt Ltd</td>
+    <td>9876543210</td>
+    <td>9123456780</td>
+    <td>contact@abctech.com</td>
+    <td>India</td>
+    <td>Tamil Nadu</td>
+    <td>Madurai</td>
+    <td>625001</td>
+    <td>Anna Nagar, Madurai</td>
+    <td>Bypass Road, Madurai</td>
+    <td>
+      <span class="badge badge-active">Active</span>
+    </td>
+    <td class="action-cell">
+
+  <button class="kebab-btn" type="button" aria-label="Actions">
+    <i class="fa fa-ellipsis-vertical"></i>
+  </button>
+</td>
+  </tr><tr>
+    <td>1</td>
+    <td>ORG-001</td>
+    <td>ABC Technologies Pvt Ltd</td>
+    <td>9876543210</td>
+    <td>9123456780</td>
+    <td>contact@abctech.com</td>
+    <td>India</td>
+    <td>Tamil Nadu</td>
+    <td>Madurai</td>
+    <td>625001</td>
+    <td>Anna Nagar, Madurai</td>
+    <td>Bypass Road, Madurai</td>
+    <td>
+      <span class="badge badge-active">Active</span>
+    </td>
+    <td class="action-cell">
+
+  <button class="kebab-btn" type="button" aria-label="Actions">
+    <i class="fa fa-ellipsis-vertical"></i>
+  </button>
+</td>
+  </tr><tr>
+    <td>1</td>
+    <td>ORG-001</td>
+    <td>ABC Technologies Pvt Ltd</td>
+    <td>9876543210</td>
+    <td>9123456780</td>
+    <td>contact@abctech.com</td>
+    <td>India</td>
+    <td>Tamil Nadu</td>
+    <td>Madurai</td>
+    <td>625001</td>
+    <td>Anna Nagar, Madurai</td>
+    <td>Bypass Road, Madurai</td>
+    <td>
+      <span class="badge badge-active">Active</span>
+    </td>
+    <td class="action-cell">
+
+  <button class="kebab-btn" type="button" aria-label="Actions">
+    <i class="fa fa-ellipsis-vertical"></i>
+  </button>
+</td>
+  </tr><tr>
+    <td>1</td>
+    <td>ORG-001</td>
+    <td>ABC Technologies Pvt Ltd</td>
+    <td>9876543210</td>
+    <td>9123456780</td>
+    <td>contact@abctech.com</td>
+    <td>India</td>
+    <td>Tamil Nadu</td>
+    <td>Madurai</td>
+    <td>625001</td>
+    <td>Anna Nagar, Madurai</td>
+    <td>Bypass Road, Madurai</td>
+    <td>
+      <span class="badge badge-active">Active</span>
+    </td>
+    <td class="action-cell">
+
+  <button class="kebab-btn" type="button" aria-label="Actions">
+    <i class="fa fa-ellipsis-vertical"></i>
+  </button>
+</td>
+  </tr>
+</tbody>
+    </table>
+  </div>
+
+  <!-- Footer -->
+  <div class="table-footer">
+    <span>Showing 1–15 of 635 results</span>
+
+    <div class="pagination">
+      <button>&lt;</button>
+      <button class="active">1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>4</button>
+      <button>&gt;</button>
+    </div>
+
+    <div class="page-size">
+      Display
+      <select id="pageSizeSelect">
+      <option value="10">10</option>
+      <option value="15">15</option>
+      <option value="25">25</option>
+      <option value="50">50</option>
+      </select>
+      per page
+    </div>
+  </div>
+</div>
+</div>
+<div class="global-kebab-menu" id="globalKebabMenu">
+    <button class="menu-item">
+        <i class="fa fa-eye"></i> View
+    </button>
+    <button class="menu-item">
+        <i class="fa fa-edit"></i> Edit
+    </button>
+    <button class="menu-item delete">
+        <i class="fa fa-trash"></i> Delete
+    </button>
+</div>
+
+<script src="~/Scripts/pages/organisation.js" asp-append-version="true"></script>

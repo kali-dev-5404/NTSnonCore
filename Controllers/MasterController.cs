@@ -14,6 +14,15 @@ namespace NTSnonCoreWebApp.Controllers
             return View();
         }
 
+        public ActionResult Addorganisation()
+        {
+            ViewData["Title"] = "Add Organisation | Master | NTS";
+            ViewData["PageHeading"] = "Add Organisation";
+            ViewData["PageSubtitle"] = "Create new organisation";
+
+            return View();
+        }
+
         public ActionResult Branch()
         {
             ViewData["Title"] = "Branch | Master | NTS";

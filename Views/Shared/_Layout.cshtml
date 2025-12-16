@@ -59,7 +59,7 @@
                     </li>
 
                     <!-- Master -->
-                    <li class="nav-item has-children">
+                    <li class="nav-item has-children @(currentController == "Master" ? "active" : "")">
                         <button class="nav-link nav-toggle">
                             <span class="nav-icon"><i class="fa-solid fa-layer-group"></i></span>
                             <span class="nav-text">Master</span>
@@ -73,7 +73,7 @@
                     </li>
 
                     <!-- Client -->
-                    <li class="nav-item has-children">
+                    <li class="nav-item has-children @(currentController == "Client" ? "active" : "")">
                         <button class="nav-link nav-toggle">
                             <span class="nav-icon"><i class="fa-solid fa-users"></i></span>
                             <span class="nav-text">Client</span>
@@ -150,7 +150,7 @@
                     </li>
 
                      <!-- Milk Shop -->
-          <li class="nav-item has-children">
+          <li class="nav-item has-children @(currentController == "MilkShop" ? "active" : "")">
             <button class="nav-link nav-toggle">
               <span class="nav-icon"><i class="fa-solid fa-bottle-water"></i></span>
               <span class="nav-text">Milk Shop</span>
@@ -164,7 +164,7 @@
 
           <!-- Admin -->
           <li class="nav-item has-children">
-            <button class="nav-link nav-toggle">
+            <button class="nav-link nav-toggle @(currentController == "Admin" ? "active" : "")">
               <span class="nav-icon"><i class='fas fa-cog'></i></span>
               <span class="nav-text">Admin</span>
               <span class="nav-caret"><i class='fas fa-chevron-down'></i></span>
@@ -177,19 +177,19 @@
             </ul>
           </li>
 
-          <!-- Tractor -->
-          <li class="nav-item has-children">
-            <button class="nav-link nav-toggle">
-              <span class="nav-icon"><i class='fas fa-tractor'></i></span>
-              <span class="nav-text">Tractor</span>
-              <span class="nav-caret"><i class='fas fa-chevron-down'></i></span>
-            </button>
-            <ul class="nav-submenu">
+                    <!-- Tractor -->
+                    <li class="nav-item has-children @(currentController == "Tractor" ? "active" : "")">
+                        <button class="nav-link nav-toggle">
+                        <span class="nav-icon"><i class='fas fa-tractor'></i></span>
+                        <span class="nav-text">Tractor</span>
+                        <span class="nav-caret"><i class='fas fa-chevron-down'></i></span>
+                        </button>
+                        <ul class="nav-submenu">
                             <li><a class="nav-sublink" href="@Url.Action("Index", "Tractor")">tractor</a></li>
                             <li><a class="nav-sublink" href="@Url.Action("Rent", "Tractor")">Tractor Rent List</a></li>
                             <li><a class="nav-sublink" href="@Url.Action("RentByCustomer", "Tractor")">Rent List By Customer</a></li>
-            </ul>
-          </li>
+                        </ul>
+                    </li>
 
                     <!-- Membership -->
                     <li class="nav-item @(currentController == "Membership" ? "active" : "")">
@@ -237,7 +237,7 @@
 
         <!-- FOOTER -->
         <footer class="sidebar-footer app-footer">
-            <span>© 2025 IT Solutions. All rights reserved.</span>
+            <span>© 2025 NTS BOOK. All rights reserved.</span>
         </footer>
 
     </div>

@@ -158,6 +158,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\pages\dashboard.css" />
+    <Content Include="Content\pages\organisation.css" />
     <Content Include="Content\Site.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -191,6 +193,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\main.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\pages\organisation.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -228,6 +231,7 @@
     <Content Include="Views\Tractor\RentByCustomer.cshtml" />
     <Content Include="Views\UserProfile\Profile.cshtml" />
     <Content Include="Views\UserProfile\Settings.cshtml" />
+    <Content Include="Views\Master\Addorganisation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -850,3 +850,25 @@ aside a{
         font-size: 10px;
     }
 }
+
+/* Prevent bootstrap rows from overflowing */
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+.sidebar-main {
+    overflow-x: hidden;
+}
+
+.nts-bootstrap {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+    .nts-bootstrap .row {
+        margin-left: 0;
+        margin-right: 0;
+    }

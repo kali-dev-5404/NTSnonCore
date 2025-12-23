@@ -6,137 +6,57 @@ ViewData["PageSubtitle"] = "Create a new organisation with basic details";
 
 <link href="~/Content/pages/addorganisation.css" rel="stylesheet" />
 
-<div class="content-section">
-    <form asp-action="AddOrganisation" method="post">
-        <div class="form-body">
-            <div class="container-box">
+<section class="org-form-wrapper">
+    <form class="org-form-card" method="post">
 
-                <!-- Header -->
-                <div class="form-header">
-                    <a asp-action="Index" class="back-btn" aria-label="Go back">
-                        <i class="fa-regular fa-circle-left"></i>
-                    </a>
-                    <h1 class="title">Add Organisation</h1>
-                </div>
-
-                <!-- Organisation Details -->
-                <fieldset class="box">
-                    <legend class="box-legend">Organisation Details</legend>
-
-                    <div class="box-grid">
-                        <div class="form-group">
-                            <label>Organisation Code</label>
-                            <input type="text" name="OrganisationCode" placeholder="Enter code" />
-                        </div>
-
-                        <div class="form-group">
-                            <label>Organisation Name</label>
-                            <input type="text" name="OrganisationName" placeholder="Enter name" />
-                        </div>
-
-                        <div class="form-group">
-                            <label>Email</label>
-                            <input type="email" name="Email" placeholder="Enter email" />
-                        </div>
-
-                        <div class="form-group span-1">
-                            <label>Primary Mobile Number</label>
-                            <div class="phone-input d-flex gap-2">
-                                <select name="PrimaryCountryCode">
-                                    <option value="">+-</option>
-                                    <option value="+91">+91</option>
-                                    <option value="+1">+1</option>
-                                    <option value="+44">+44</option>
-                                </select>
-                                <input type="text" name="PrimaryMobile" placeholder="Enter number" />
-                            </div>
-                        </div>
-
-                        <div class="form-group span-1">
-                            <label>Alternate Mobile Number</label>
-                            <div class="phone-input d-flex gap-2">
-                                <select name="AlternateCountryCode">
-                                    <option value="">+-</option>
-                                    <option value="+91">+91</option>
-                                    <option value="+1">+1</option>
-                                    <option value="+44">+44</option>
-                                </select>
-                                <input type="text" name="AlternateMobile" placeholder="Enter number" />
-                            </div>
-                        </div>
-
-                        <div class="empty-slot"></div>
-                    </div>
-                </fieldset>
-
-                <!-- Address -->
-                <fieldset class="box box-address">
-                    <legend class="box-legend">Organisation Address</legend>
-
-                    <div class="box-grid single">
-                        <div class="form-group full">
-                            <label>Primary Address</label>
-                            <textarea name="PrimaryAddress" rows="3" placeholder="Enter primary address"></textarea>
-                        </div>
-
-                        <div class="form-group full">
-                            <label>Alternate Address</label>
-                            <textarea name="AlternateAddress" rows="2" placeholder="Enter alternate address"></textarea>
-                        </div>
-                    </div>
-
-                    <div class="box-grid quad">
-                        <div class="form-group">
-                            <label>Country</label>
-                            <select name="Country">
-                                <option value="">Select Country</option>
-                                <option>India</option>
-                                <option>USA</option>
-                                <option>UK</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label>State</label>
-                            <select name="State">
-                                <option value="">Select State</option>
-                                <option>Tamil Nadu</option>
-                                <option>Kerala</option>
-                                <option>Karnataka</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label>City</label>
-                            <select name="City">
-                                <option value="">Select City</option>
-                                <option>Chennai</option>
-                                <option>Coimbatore</option>
-                                <option>Madurai</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group active-group">
-                            <label>Active</label>
-                            <div class="radio-group">
-                                <label class="radio-item">
-                                    <input type="radio" name="IsActive" value="true"> <span>Yes</span>
-                                </label>
-                                <label class="radio-item">
-                                    <input type="radio" name="IsActive" value="false"> <span>No</span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </fieldset>
-
-                <!-- Actions -->
-                <div class="form-actions">
-                    <button type="submit" class="btn primary">Add Organisation</button>
-                    <a asp-action="Index" class="btn ghost">Cancel</a>
-                </div>
-
-            </div>
+        <div class="org-form-header">
+            <h2>Organisation Details</h2>
+            <p>Please fill all required information</p>
         </div>
+
+        <div class="org-form-grid">
+
+            <div class="org-field">
+                <label for="OrgName">Organisation Name</label>
+                <input type="text" id="OrgName" name="OrgName" placeholder="Enter organisation name" required />
+            </div>
+
+            <div class="org-field">
+                <label for="ShortName">Short Name</label>
+                <input type="text" id="ShortName" name="ShortName" placeholder="Eg: NTS" />
+            </div>
+
+            <div class="org-field">
+                <label for="Email">Email</label>
+                <input type="email" id="Email" name="Email" placeholder="example@mail.com" />
+            </div>
+
+            <div class="org-field">
+                <label for="Phone">Phone</label>
+                <input type="tel" id="Phone" name="Phone" placeholder="9876543210" />
+            </div>
+
+            <div class="org-field">
+                <label for="GST">GST Number</label>
+                <input type="text" id="GST" name="GST" placeholder="GSTIN" />
+            </div>
+
+            <div class="org-field">
+                <label for="PAN">PAN Number</label>
+                <input type="text" id="PAN" name="PAN" placeholder="PAN" />
+            </div>
+
+            <div class="org-field org-field-full">
+                <label for="Address">Address</label>
+                <textarea id="Address" name="Address" rows="3" placeholder="Full address"></textarea>
+            </div>
+
+        </div>
+
+        <div class="org-form-actions">
+            <button type="submit" class="btn-primary">Save Organisation</button>
+            <a href="@Url.Action("Organisation", "Master")" class="btn-secondary">Cancel</a>
+        </div>
+
     </form>
-</div>
+</section>

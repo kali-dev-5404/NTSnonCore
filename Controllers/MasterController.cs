@@ -18,7 +18,7 @@ namespace NTSnonCoreWebApp.Controllers
         {
             ViewData["Title"] = "Add Organisation | Master | NTS";
             ViewData["PageHeading"] = "Add Organisation";
-            ViewData["PageSubtitle"] = "Create new organisation";
+            ViewData["PageSubtitle"] = "Create new organisation with basic details";
 
             return View();
         }

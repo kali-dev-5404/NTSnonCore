@@ -1,7 +1,142 @@
 @{
-  ViewData["Title"] = "Branch";
-  ViewData["Page"] = "branch";
+    ViewData["Title"] = "Add Organisation | Master | NTS";
+ViewData["PageHeading"] = "Add Organisation";
+ViewData["PageSubtitle"] = "Create a new organisation with basic details";
 }
 
-<h2>Branch</h2>
-<p>Manage branches here.</p>
+<link href="~/Content/pages/branch.css" rel="stylesheet" />
+
+<section class="org-page">
+
+    <!-- Header -->
+    <div class="org-page-header">
+        <a href="@Url.Action("Organisation", "Master")" class="org-back">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
+        <h2>Add Organisation</h2>
+    </div>
+
+    <form id="orgForm" novalidate>
+
+        <!-- Organisation Details -->
+        <div class="org-card">
+            <h3 class="org-card-title">Organisation Details</h3>
+
+            <div class="org-grid-3">
+
+                <div class="org-field">
+                    <label>Organisation Code <span class="req">*</span></label>
+                    <input type="text" name="OrgCode" data-required placeholder="Enter organisation code" />
+                    <small class="error-msg"></small>
+                </div>
+
+                <div class="org-field">
+                    <label>Organisation Name <span class="req">*</span></label>
+                    <input type="text" name="OrgName" data-required placeholder="Enter organisation name" />
+                    <small class="error-msg"></small>
+                </div>
+
+                <div class="org-field">
+                    <label>Email <span class="req">*</span></label>
+                    <input type="email" name="Email" data-required placeholder="example@company.com" />
+                    <small class="error-msg"></small>
+                </div>
+
+                <div class="org-field org-field-phone">
+                    <label>Primary Mobile Number <span class="req">*</span></label>
+                    <input type="text" name="PrimaryPhone" class="org-phone-input" data-required data-phone placeholder="10-digit mobile number" />
+                    <small class="error-msg"></small>
+                </div>
+
+                <div class="org-field org-field-phone">
+                    <label>Alternate Mobile Number</label>
+                    <input type="text" name="AltPhone" class="org-phone-input"placeholder="mobile number (optional)" />
+                    <small class="error-msg"></small>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Divider gap -->
+           <div class="org-card-divider"></div>
+
+
+        <!-- Organisation Address -->
+        <div class="org-card">
+            <h3 class="org-card-title">Organisation Address</h3>
+
+            <div class="org-grid-2">
+
+                <div class="org-field">
+                    <label>Primary Address <span class="req">*</span></label>
+                    <textarea name="PrimaryAddress" rows="3" data-required placeholder="Enter primary address"></textarea>
+                    <small class="error-msg"></small>
+                </div>
+
+                <div class="org-field">
+                    <label>Alternate Address</label>
+                    <textarea name="AltAddress" rows="3" placeholder="Enter alternate address (optional)"></textarea>
+                    <small class="error-msg"></small>
+                </div>
+
+            </div>
+
+            <div class="org-grid-4">
+
+               <div class="org-field">
+                    <label>Country <span class="req">*</span></label>
+                    <div class="search-dropdown" data-required>
+                        <input type="text" id="countryInput" placeholder="Search country"/>
+                        <div class="dropdown-list" id="countryList"></div>
+                        <input type="hidden" name="Country" id="countryValue" data-required />
+                    </div>
+                    <small class="error-msg"></small>
+                </div>
+
+                <div class="org-field">
+                    <label>State <span class="req">*</span></label>
+                    <div class="search-dropdown disabled" data-required>
+                        <input type="text" id="stateInput" placeholder="Search state"/>
+                        <div class="dropdown-list" id="stateList"></div>
+                        <input type="hidden" name="State" id="stateValue" data-required />
+                    </div>
+                    <small class="error-msg"></small>
+                </div>
+
+                <div class="org-field">
+                    <label>City <span class="req">*</span></label>
+                    <div class="search-dropdown disabled" data-required>
+                        <input type="text" id="cityInput" placeholder="Search city"/>
+                        <div class="dropdown-list" id="cityList"></div>
+                        <input type="hidden" name="City" id="cityValue" data-required />
+                    </div>
+                    <small class="error-msg"></small>
+                </div>
+
+
+
+                <div class="org-field org-field-small">
+                    <label>Active</label>
+                    <div class="org-radio">
+                        <label><input type="radio" name="IsActive" checked /> Yes</label>
+                        <label><input type="radio" name="IsActive" /> No</label>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="org-actions">
+            <button type="submit" class="btn-primary">Add Organisation</button>
+            <a href="@Url.Action("Organisation", "Master")" class="btn-secondary">Cancel</a>
+        </div>
+
+    </form>
+
+</section>
+
+    @section Scripts {
+        <script src="~/Scripts/pages/addorganisation.js"></script>
+}
+

@@ -746,7 +746,7 @@ aside a{
     display: flex;
     flex-direction: column;
     min-height: 0;
-    padding: var(--space-8) var(--space-9) var(--space-7);
+    padding: 16px;
 }
 
 /* Content card must fill available height */
@@ -781,6 +781,13 @@ aside a{
 /* =========================
    Responsive
    ========================= */
+
+@media (min-width: 1200px) {
+    .sidebar-main {
+        padding: 18px 20px;
+    }
+}
+
 @media (max-width: 960px) {
     .app-layout {
         grid-template-columns: 1fr;
